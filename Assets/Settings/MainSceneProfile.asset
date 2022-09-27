@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   threshold:
     m_OverrideState: 1
     m_Value: 1
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   postExposure:
     m_OverrideState: 0
     m_Value: 0
@@ -82,5 +82,5 @@ MonoBehaviour:
   m_Name: MainSceneProfile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -7893295128165547882}
   - {fileID: -7426358906053492361}
+  - {fileID: -7893295128165547882}
