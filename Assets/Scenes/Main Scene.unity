@@ -2217,6 +2217,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1047957880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 80e2315a6b88d084d97d488a95f1077c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1557146831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1047957883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047957880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311e9e79ffc14284f96e1327069c5249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  sprites:
+  - {fileID: 3286163911610860551, guid: 80e2315a6b88d084d97d488a95f1077c, type: 3}
+  - {fileID: 3286163911610860551, guid: c0afe4417de6c314e92dd9151117ff64, type: 3}
+--- !u!95 &1047957884
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047957880}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bde0daa4b525dda4494aaf1c38822d8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1105973871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2303,6 +2345,8 @@ GameObject:
   - component: {fileID: 1189593805}
   - component: {fileID: 1189593804}
   - component: {fileID: 1189593803}
+  - component: {fileID: 1189593806}
+  - component: {fileID: 1189593807}
   m_Layer: 7
   m_Name: Swipe Up Text
   m_TagString: Untagged
@@ -2330,10 +2374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <font="Kanit-ExtraBoldItalic SDF" material="Kanit-ExtraBoldItalic Blue
-    Outline SDF Material">SWIPE</font> <font="Kanit-ExtraBoldItalic SDF" material="Kanit-ExtraBoldItalic
-    Blue SDF Material">UP</font> <font="Kanit-ExtraBoldItalic SDF" material="Kanit-ExtraBoldItalic
-    Blue Outline SDF Material">!!</font>
+  m_text: SWIPE $UP $!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 216c7f2ea0590224793b212bfb152315, type: 2}
   m_sharedMaterial: {fileID: -1781741421856707555, guid: 216c7f2ea0590224793b212bfb152315,
@@ -2465,9 +2506,46 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.892, y: -0.408}
-  m_SizeDelta: {x: 3, y: 1}
+  m_AnchoredPosition: {x: -1.386, y: -0.355}
+  m_SizeDelta: {x: 4, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1189593806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189593802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4205c601281d9f40a305de91867c2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  is_switch_mode: 1
+  font: {fileID: 11400000, guid: 216c7f2ea0590224793b212bfb152315, type: 2}
+  on_material: {fileID: 2100000, guid: e479ce9786172894796f498ca213409c, type: 2}
+  off_material: {fileID: 2100000, guid: c32996316a8b11b40a68c622f378470d, type: 2}
+--- !u!95 &1189593807
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189593802}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bde0daa4b525dda4494aaf1c38822d8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1193413071 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 9f197750f3cc1a547bc85ff9d4e45bd0,
@@ -2923,6 +3001,8 @@ GameObject:
   - component: {fileID: 1898039923}
   - component: {fileID: 1898039922}
   - component: {fileID: 1898039921}
+  - component: {fileID: 1898039924}
+  - component: {fileID: 1898039925}
   m_Layer: 7
   m_Name: Sep Oct 2022 Text
   m_TagString: Untagged
@@ -2950,11 +3030,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <font="Kanit-ExtraBoldItalic SDF" material="Kanit-ExtraBoldItalic Blue
-    SDF Material">SEPTEMBER</font> <font="Kanit-ExtraBoldItalic SDF" material="Kanit-ExtraBoldItalic
-    Blue Outline SDF Material">TWENTY</font><font="Kanit-ExtraBoldItalic SDF" material="Kanit-ExtraBoldItalic
-    Blue SDF Material">-TWENTY-</font><font="Kanit-ExtraBoldItalic SDF" material="Kanit-ExtraBoldItalic
-    Blue Outline SDF Material">TWO</font>
+  m_text: SEPTEMBER $TWENTY$-TWENTY-$TWO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 216c7f2ea0590224793b212bfb152315, type: 2}
   m_sharedMaterial: {fileID: -1781741421856707555, guid: 216c7f2ea0590224793b212bfb152315,
@@ -3089,6 +3165,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -1.384}
   m_SizeDelta: {x: 10, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1898039924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898039920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4205c601281d9f40a305de91867c2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  is_switch_mode: 0
+  font: {fileID: 11400000, guid: 216c7f2ea0590224793b212bfb152315, type: 2}
+  on_material: {fileID: 2100000, guid: e479ce9786172894796f498ca213409c, type: 2}
+  off_material: {fileID: 2100000, guid: c32996316a8b11b40a68c622f378470d, type: 2}
+--- !u!95 &1898039925
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898039920}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bde0daa4b525dda4494aaf1c38822d8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2062525729
 GameObject:
   m_ObjectHideFlags: 0
