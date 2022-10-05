@@ -13,6 +13,10 @@ public class PinkLineGenerator : MonoBehaviour
     // Camera required to calculate corresponding world coordinates from screen-space
     [SerializeField] public Camera background_camera;
     [SerializeField] public Transform[] checkpoint_objects;
+    // Chance of any single checkpoint being actually used in curve generation
+    [SerializeField]
+    [Range(0, 1)]
+    public float selection_probability = 1f;
     // The number of intermediate draw points for every 1 unit of curve length
     [SerializeField] public int draw_density = 10;
     [SerializeField] public float z_offset = 0f;
@@ -23,7 +27,7 @@ public class PinkLineGenerator : MonoBehaviour
 
     private LineRenderer linerenderer;
     private float screen_world_width;
-    private float screen_world_height;
+    private float screen_world_height; 
 
     void Start()
         {
@@ -52,16 +56,20 @@ public class PinkLineGenerator : MonoBehaviour
 
         foreach (Transform checkpoint_object in checkpoint_objects)
             {
-            // Exact position
-            Vector3 position = checkpoint_object.position;
+            if (Random.Range(0f, 1f) <= selection_probability)
+                {
+                // Exact position
+                Vector3 position = checkpoint_object.position;
 
-            // Add random offset
-            Vector2 checkpoint = new Vector2(position.x, position.y);
-            checkpoint += new Vector2(
-                checkpoint_inaccuracy * Random.Range(-1, 1),
-                checkpoint_inaccuracy * Random.Range(-1, 1));
+                // Add random offset
+                Vector2 checkpoint = new Vector2(position.x, position.y);
+                checkpoint += new Vector2(
+                    // Do not randomise x too much, as the horizontal order of checkpoints changing can look ugly
+                    checkpoint_inaccuracy * Random.Range(-0.25f, 0.25f),
+                    checkpoint_inaccuracy * Random.Range(-1f, 1f));
 
-            checkpoints.Add(checkpoint);
+                checkpoints.Add(checkpoint);
+                }
             }
 
         // Sort by ascending x-position, left-to-right
@@ -73,10 +81,10 @@ public class PinkLineGenerator : MonoBehaviour
             {
             Vector2 leftmost_checkpoint =
                 new Vector2(-screen_world_width / 2,
-                checkpoints[0].y + endpoint_offset * Random.Range(-1, 1));
+                checkpoints[0].y + endpoint_offset * Random.Range(-1f, 1f));
             Vector2 rightmost_checkpoint =
                 new Vector2(screen_world_width / 2,
-                checkpoints[checkpoints.Count - 1].y + endpoint_offset * Random.Range(-1, 1));
+                checkpoints[checkpoints.Count - 1].y + endpoint_offset * Random.Range(-1f, 1f));
 
             checkpoints.Insert(0, leftmost_checkpoint);
             checkpoints.Add(rightmost_checkpoint);
