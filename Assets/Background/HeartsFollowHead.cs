@@ -1,3 +1,5 @@
+// Allow the particle effect object to follow Sairi's head position during movement
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +8,7 @@ public class HeartsFollowHead : MonoBehaviour
     {
     [SerializeField] public Transform head_transform;
     [SerializeField] public Vector3 offset;
+    // Provide animators an iterface to control particle fade through opacity
     [SerializeField]
     [Range(0, 1)]
     public float opacity = 1;
