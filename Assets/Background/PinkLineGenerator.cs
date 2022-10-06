@@ -38,10 +38,23 @@ public class PinkLineGenerator : MonoBehaviour
         screen_world_height = background_camera.orthographicSize * 2;
         screen_world_width = screen_world_height * aspect;
 
+        DrawLine();
+        }
+
+    void Update()
+        {
+        if (Input.GetKeyDown("space"))
+            {
+            DrawLine();
+            }
+        }
+
+    void DrawLine()
+        {
         // Generate points to draw
         List<Vector2> initial_checkpoints = GenerateCheckPoints();
         List<Vector3> draw_points = GenerateBezierPoints(initial_checkpoints);
-        
+
         // Setup LineRenderer 
         int length = draw_points.Count;
         linerenderer.positionCount = length;
@@ -65,7 +78,7 @@ public class PinkLineGenerator : MonoBehaviour
                 Vector2 checkpoint = new Vector2(position.x, position.y);
                 checkpoint += new Vector2(
                     // Do not randomise x too much, as the horizontal order of checkpoints changing can look ugly
-                    checkpoint_inaccuracy * Random.Range(-0.25f, 0.25f),
+                    checkpoint_inaccuracy * Random.Range(-0.5f, 0.5f),
                     checkpoint_inaccuracy * Random.Range(-1f, 1f));
 
                 checkpoints.Add(checkpoint);
@@ -151,13 +164,13 @@ public class PinkLineGenerator : MonoBehaviour
             // Last control point
             Vector2 p3 = checkpoints[i + 1];
 
-            // iterations = distance * density
+            // iterations = distance * density, use density if distance is too small
             // Distance is a fast approximation
             int draw_iterations =
-                (int)(Vector2.Distance(p0, p1)
+                (int)Mathf.Max(Vector2.Distance(p0, p1)
                 + Vector2.Distance(p1, p2)
-                + Vector2.Distance(p2, p3))
-                * draw_density;
+                + Vector2.Distance(p2, p3)
+                * draw_density, draw_density);
 
             // Actually calculate curve points
             for (int draw_iteration = 0; draw_iteration < draw_iterations; draw_iteration++)
