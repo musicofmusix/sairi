@@ -24,10 +24,23 @@ public class PinkLineGenerator : MonoBehaviour
     [SerializeField] public float checkpoint_inaccuracy = 0f;
     // Amount of y offset when generating checkpoints at each end of the screen
     [SerializeField] public float endpoint_offset = 0f;
+    // Animation progress; 0 to 1 draws the line, 1 to 2 erases/retracts it
+    [SerializeField]
+    [Range(0, 2)]
+    public float progress = 0f;
+    // A 'button' to regrenerate a new line shape/path, accessible by animations
+    public bool generate_new_line = false;
 
     private LineRenderer linerenderer;
     private float screen_world_width;
-    private float screen_world_height; 
+    private float screen_world_height;
+    // Tracker variable for progress 'phase' change detection
+    private float last_progress;
+
+    private List<Vector3> draw_points;
+    private List<Vector3> draw_points_reverse;
+    private int draw_length;
+
 
     void Start()
         {
@@ -38,27 +51,50 @@ public class PinkLineGenerator : MonoBehaviour
         screen_world_height = background_camera.orthographicSize * 2;
         screen_world_width = screen_world_height * aspect;
 
-        DrawLine();
+        // Update progress tracker
+        last_progress = progress;
+
+        // Generate initial line shape
+        GenerateLine();
         }
 
+    // Implement the progressive line draw and retraction effect depending on progress
+    // Instead of creating new position arrays every time progress changes,
+    // simply change the number of points drawn by the LineRenderer via its positionCount property
+    // Reverse point order for the retraction effect
     void Update()
         {
-        if (Input.GetKeyDown("space"))
+        // normal_progress is always between 0 and 1 inclusive
+        // normal_progress when progress > 1 reverses direction,
+        // starting from 1 and ending at 0 for the line retraction effect
+        float normal_progress = progress <= 1 ? progress : 2 - progress;
+        linerenderer.positionCount = (int)(draw_length * normal_progress);
+        linerenderer.SetPositions(draw_points.ToArray());
+
+        // If the new line generation 'button' bool is activated
+        if (generate_new_line)
             {
-            DrawLine();
+            GenerateLine();
+            generate_new_line = false;
             }
+
+        // When progress changes 'phase' from 0-1 to 1-2 and vice versa
+        // Do nothing when progress is exactly 2 (floor is also 2), as it is not a phase change
+        if (Mathf.Floor(progress) != Mathf.Floor(last_progress) && progress != 2)
+            {
+            draw_points.Reverse();
+            }
+
+        // Update progress tracker
+        last_progress = progress;
         }
 
-    void DrawLine()
+    void GenerateLine()
         {
         // Generate points to draw
         List<Vector2> initial_checkpoints = GenerateCheckPoints();
-        List<Vector3> draw_points = GenerateBezierPoints(initial_checkpoints);
-
-        // Setup LineRenderer 
-        int length = draw_points.Count;
-        linerenderer.positionCount = length;
-        linerenderer.SetPositions(draw_points.ToArray());
+        draw_points = GenerateBezierPoints(initial_checkpoints);
+        draw_length = draw_points.Count;
         }
 
     // Generate checkpoint positions from input array

@@ -8331,6 +8331,7 @@ GameObject:
   - component: {fileID: 2099299067}
   - component: {fileID: 2099299066}
   - component: {fileID: 2099299068}
+  - component: {fileID: 2099299069}
   m_Layer: 7
   m_Name: Pink Line Renderer
   m_TagString: Untagged
@@ -8479,3 +8480,25 @@ MonoBehaviour:
   z_offset: 3.8
   checkpoint_inaccuracy: 1
   endpoint_offset: 2
+  progress: 0
+  generate_new_line: 0
+--- !u!95 &2099299069
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099299065}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d4396dc65632814aba346ea9c172e94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
