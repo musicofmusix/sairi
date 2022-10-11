@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18290149, g: 0.22859733, b: 0.3069102, a: 1}
+  m_IndirectSpecularColor: {r: 0.18290184, g: 0.22859791, b: 0.30691123, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1290,8 +1290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6553cf03262124101b6760d86aebc5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal_sensitivity: -0.32
-  vertical_sensitivity: -0.2
+  horizontal_sensitivity: -12
+  vertical_sensitivity: -8
   horizontal_limit: 16
   vertical_limit: 6
 --- !u!1001 &734229079
@@ -2714,8 +2714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6553cf03262124101b6760d86aebc5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal_sensitivity: 0.08
-  vertical_sensitivity: 0.05
+  horizontal_sensitivity: 3
+  vertical_sensitivity: 2
   horizontal_limit: 4
   vertical_limit: 1.5
 --- !u!1 &1047957880 stripped

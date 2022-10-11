@@ -8,11 +8,11 @@ public class RotateObject : MonoBehaviour
 	{
 	// Use negative sensitivity for flipped horizontal and vertical rotation
 	[SerializeField]
-	[Range(-1f, 1f)]
-	public float horizontal_sensitivity = 0.1f;
+	[Range(-100f, 100f)]
+	public float horizontal_sensitivity = 10f;
 	[SerializeField]
-	[Range(-1f, 1f)]
-	public float vertical_sensitivity = 0.1f;
+	[Range(-100f, 100f)]
+	public float vertical_sensitivity = 10f;
 	[SerializeField]
 	[Range(0f, 90f)]
 	public float horizontal_limit = 5f;
@@ -32,13 +32,12 @@ public class RotateObject : MonoBehaviour
 
 	void Update()
 		{
-		rotation.x += Input.GetAxis("Mouse X") * horizontal_sensitivity;
-		rotation.y += Input.GetAxis("Mouse Y") * vertical_sensitivity;
+		rotation.x += Input.GetAxis("Mouse X") * horizontal_sensitivity * Time.deltaTime;
+		rotation.y += Input.GetAxis("Mouse Y") * vertical_sensitivity * Time.deltaTime;
 
 		rotation.x = ClampAngle(rotation.x, -horizontal_limit, horizontal_limit);
 		rotation.y = ClampAngle(rotation.y, -vertical_limit, vertical_limit);
 
-		
 		transform.localEulerAngles = new Vector3(start_rotation.x - rotation.y, start_rotation.y + rotation.x, 0);
 		}
 
