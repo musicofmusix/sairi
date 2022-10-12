@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Exclude 3rd party files from language statistics
+Assets/TextMesh*Pro/** linguist-vendored
