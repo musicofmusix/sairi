@@ -10,8 +10,9 @@ using UnityEngine;
 
 public class PinkLineGenerator : MonoBehaviour
     {
+    [SerializeField] public Vector2 target_aspect;
     // Camera required to calculate corresponding world coordinates from screen-space
-    [SerializeField] public Camera background_camera;
+    [SerializeField] public Camera reference_camera;
     [SerializeField] public Transform[] checkpoint_objects;
     // Chance of any single checkpoint being actually used in curve generation
     [SerializeField]
@@ -47,8 +48,8 @@ public class PinkLineGenerator : MonoBehaviour
         linerenderer = GetComponent<LineRenderer>();
 
         // Calculate screen size in terms of world coordinates
-        float aspect = (float)Screen.width / Screen.height;
-        screen_world_height = background_camera.orthographicSize * 2;
+        float aspect = target_aspect.x / target_aspect.y;
+        screen_world_height = reference_camera.orthographicSize * 2;
         screen_world_width = screen_world_height * aspect;
 
         // Update progress tracker
