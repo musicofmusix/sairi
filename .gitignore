@@ -5,6 +5,7 @@
 
 # User-added ignores go here
 /Assets/URP UniVrm*
+Build_BurstDebugInformation_DoNotShip/*
 
 /[Ll]ibrary/
 /[Tt]emp/

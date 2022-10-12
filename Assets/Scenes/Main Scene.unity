@@ -195,7 +195,7 @@ Camera:
   m_GameObject: {fileID: 12300782}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -3133,7 +3133,7 @@ GameObject:
   - component: {fileID: 1325450977}
   - component: {fileID: 1325450976}
   m_Layer: 0
-  m_Name: Black Bars
+  m_Name: LetterBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3156,6 +3156,8 @@ MonoBehaviour:
   - {fileID: 12300785}
   - {fileID: 860830746}
   - {fileID: 1554776290}
+  - {fileID: 330585545}
+  colour: {r: 0, g: 0, b: 0, a: 1}
 --- !u!4 &1325450977
 Transform:
   m_ObjectHideFlags: 0
@@ -8955,7 +8957,6 @@ MonoBehaviour:
   checkpoint_inaccuracy: 1
   endpoint_offset: 2
   progress: 0
-  generate_new_line: 0
 --- !u!95 &2099299069
 Animator:
   serializedVersion: 4

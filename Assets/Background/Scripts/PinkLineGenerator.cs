@@ -3,6 +3,7 @@
 // Add some randomness to checkpoint positions for different looking curves every time
 // Use Gaussian Elimination for generating control points
 // Use the Bernstein polynomial form for Beizer curve point calculation
+// Line is always generated left-to-right
 
 using System.Collections;
 using System.Collections.Generic;
@@ -29,8 +30,6 @@ public class PinkLineGenerator : MonoBehaviour
     [SerializeField]
     [Range(0, 2)]
     public float progress = 0f;
-    // A 'button' to regrenerate a new line shape/path, accessible by animations
-    public bool generate_new_line = false;
 
     private LineRenderer linerenderer;
     private float screen_world_width;
@@ -72,18 +71,19 @@ public class PinkLineGenerator : MonoBehaviour
         linerenderer.positionCount = (int)(draw_length * normal_progress);
         linerenderer.SetPositions(draw_points.ToArray());
 
-        // If the new line generation 'button' bool is activated
-        if (generate_new_line)
-            {
-            GenerateLine();
-            generate_new_line = false;
-            }
+        float a = Mathf.Floor(progress);
+        float b = Mathf.Floor(last_progress);
 
-        // When progress changes 'phase' from 0-1 to 1-2 and vice versa
-        // Do nothing when progress is exactly 2 (floor is also 2), as it is not a phase change
-        if (Mathf.Floor(progress) != Mathf.Floor(last_progress) && progress != 2)
+        // When phase changes from 0-1 to 1-2
+        if ((a == 1 || a == 2) && b == 0)
             {
             draw_points.Reverse();
+            }
+
+        // When 1-2 phase ends and wraps back
+        if (a == 0 && (b == 1 || b == 2))
+            {
+            GenerateLine();
             }
 
         // Update progress tracker
