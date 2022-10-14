@@ -340,7 +340,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &125178361
 PrefabInstance:
@@ -1003,7 +1003,7 @@ Transform:
   - {fileID: 345335194}
   - {fileID: 1859957352}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
@@ -1098,7 +1098,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 51.787, y: 88.716, z: -40.98}
 --- !u!114 &410087042
 MonoBehaviour:
@@ -1150,7 +1150,7 @@ Transform:
   m_Children:
   - {fileID: 216158875}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &520978097
 GameObject:
@@ -1214,6 +1214,59 @@ Transform:
   m_Father: {fileID: 1311873582}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &694611533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 694611534}
+  - component: {fileID: 694611535}
+  m_Layer: 0
+  m_Name: Sairi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &694611534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694611533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 708031915}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &694611535
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694611533}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 642a5d95d2a8e4991bb0def7892168a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &697002426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,7 +1309,7 @@ GameObject:
   - component: {fileID: 708031915}
   - component: {fileID: 708031916}
   m_Layer: 0
-  m_Name: Sairi
+  m_Name: SairiSub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1269,14 +1322,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708031914}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 826041126}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 694611534}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &708031916
 MonoBehaviour:
@@ -2181,6 +2234,26 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.067250416
       objectReference: {fileID: 0}
+    - target: {fileID: 5968300764029834467, guid: b63e04924cc32134eba9332157055c32,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968300764029834467, guid: b63e04924cc32134eba9332157055c32,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968300764029834467, guid: b63e04924cc32134eba9332157055c32,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968300764029834467, guid: b63e04924cc32134eba9332157055c32,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[32]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6354669856431036172, guid: b63e04924cc32134eba9332157055c32,
         type: 3}
       propertyPath: m_Layer
@@ -2512,6 +2585,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 826041122}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &826041131 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4509282080367688636, guid: b63e04924cc32134eba9332157055c32,
+    type: 3}
+  m_PrefabInstance: {fileID: 826041122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2638,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &855851440
 GameObject:
@@ -2718,6 +2797,54 @@ MonoBehaviour:
   vertical_sensitivity: 2
   horizontal_limit: 4
   vertical_limit: 1.5
+--- !u!1 &864997400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 864997402}
+  - component: {fileID: 864997401}
+  m_Layer: 0
+  m_Name: Sairi Animations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &864997401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864997400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c90ee8885374614904e3b96900bdb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animators:
+  - {fileID: 694611535}
+  - {fileID: 826041131}
+  poses: 2
+--- !u!4 &864997402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864997400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1047957880 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 80e2315a6b88d084d97d488a95f1077c,
@@ -2795,7 +2922,7 @@ Transform:
   - {fileID: 1105973872}
   - {fileID: 1898039923}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1105973871
 PrefabInstance:
@@ -3097,7 +3224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1311873582
 Transform:
   m_ObjectHideFlags: 0
@@ -3120,7 +3247,7 @@ Transform:
   - {fileID: 1775724520}
   - {fileID: 1326225875}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1325450975
 GameObject:
@@ -3610,7 +3737,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6}
 --- !u!1 &1775724519
 GameObject:
@@ -3999,7 +4126,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!199 &2062525731
 ParticleSystemRenderer:
@@ -8793,7 +8920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head_transform: {fileID: 826041124}
-  offset: {x: 0.7, y: 0.1, z: 0}
+  offset: {x: 0.75, y: 0.1, z: 0.4}
   opacity: 1
 --- !u!1 &2099299065
 GameObject:
@@ -8924,7 +9051,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2099299068
 MonoBehaviour:
