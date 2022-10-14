@@ -94,8 +94,11 @@ public class PinkLineGenerator : MonoBehaviour
         {
         // Generate points to draw
         List<Vector2> initial_checkpoints = GenerateCheckPoints();
-        draw_points = GenerateBezierPoints(initial_checkpoints);
-        draw_length = draw_points.Count;
+        if (initial_checkpoints.Count > 0)
+            {
+            draw_points = GenerateBezierPoints(initial_checkpoints);
+            draw_length = draw_points.Count;
+            }
         }
 
     // Generate checkpoint positions from input array
