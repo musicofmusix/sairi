@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18289766, g: 0.22857621, b: 0.3069046, a: 1}
+  m_IndirectSpecularColor: {r: 0.18290198, g: 0.22859843, b: 0.30690992, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -507,8 +507,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <font="Kanit-ExtraBoldItalic SDF" material="Kanit-ExtraBoldItalic Blue
-    SDF Material">NEXT SCREEN</font>
+  m_text: '<font="Kanit-ExtraBoldItalic SDF" material="Kanit-ExtraBoldItalic Blue
+    SDF Material">POSE : FLOAT</font>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 216c7f2ea0590224793b212bfb152315, type: 2}
   m_sharedMaterial: {fileID: -1781741421856707555, guid: 216c7f2ea0590224793b212bfb152315,
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: -4
+  m_characterSpacing: -2
   m_wordSpacing: -4
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -641,7 +641,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.754}
-  m_SizeDelta: {x: 10, y: 1}
+  m_SizeDelta: {x: 15, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &275905704
 GameObject:
@@ -1037,7 +1037,7 @@ Transform:
   - {fileID: 345335194}
   - {fileID: 1859957352}
   m_Father: {fileID: 2138865776}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
@@ -1164,6 +1164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 436573414}
   - component: {fileID: 436573415}
+  - component: {fileID: 436573416}
   m_Layer: 9
   m_Name: Layer 3
   m_TagString: Untagged
@@ -1185,7 +1186,7 @@ Transform:
   m_Children:
   - {fileID: 216158875}
   m_Father: {fileID: 2138865776}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &436573415
 MonoBehaviour:
@@ -1204,8 +1205,27 @@ MonoBehaviour:
   font: {fileID: 11400000, guid: 216c7f2ea0590224793b212bfb152315, type: 2}
   clone_material: {fileID: 2100000, guid: f3fdc583cdc25784c84013033c2421dd, type: 2}
   text: NEXT SCREEN
-  y_offset: 0.8
+  y_offset: 0.82
   single_side_clones: 3
+--- !u!114 &436573416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436573413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7a906653ede794cb26cd07376601c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  text1: 'POSE : FLOAT'
+  text2: 'POSE : WALK'
+  gibberish_text: "\u2020\xC1\u02DD\xC2\xF9\u02D8N\xE6\xB4'>\xBA=g\u2014\xD4qF6aC\xB0\xE3\u201C\u02DB\xE8G\xDA\xBB\u20AC\u20195M\uF8FF\xA9\xEE\xF8\u0178m\xED\xEB\xF3\xA3\xF7.\u2044\xFB\xC5<wQ\xD8\u0192\uFB02\u2030\u2021\xECp\xD5\xAAv*@rs\u2211U4\xA8\xFC3\xCDb\u2260\u02DC\xD6\xEAZ\u20182\xC6TO)\u2022\xA5_:l\xDBdKh\u2264\uFB01\xC8\u2013[\xB7DW!,\u0152]`/\xB1\xAC\xABi\xA2\xCEX\u2122\xAE\u02D9P\xF2{\xFA%+E\"\xCC&\u201A\u221AcS\u221EYI}~\xD9\xD31\xC4\xE4\u2026^\u222B\xB8\xE2f\u02C6\xF4j|\xF1\xE5\xD1o\u201D\u201E\xCB\xB5\xDF\u2039\xBF\u203A\xE77(e;9u\xEF\u0153L\u2202\xFF\\\xDC\xB6\xF5y\u02DA?\xA1\u0131H\xC9\u2248-\xCA\xE9t\xC0\xCF"
+  wait_seconds: 0.03
+  minimum_chars: 10
+  maximum_chars: 15
 --- !u!1 &520978097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,7 +3192,7 @@ Transform:
   - {fileID: 275905705}
   - {fileID: 1898039923}
   m_Father: {fileID: 2138865776}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1105973871
 PrefabInstance:
@@ -3595,7 +3615,7 @@ Transform:
   - {fileID: 1775724520}
   - {fileID: 1326225875}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1325450975
 GameObject:
@@ -4474,7 +4494,7 @@ Transform:
   - {fileID: 881625776}
   - {fileID: 623680704}
   m_Father: {fileID: 2138865776}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062525729
 GameObject:
@@ -4502,13 +4522,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062525729}
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 2138865776}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!199 &2062525731
 ParticleSystemRenderer:
@@ -9427,13 +9447,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099299065}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 2138865776}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2099299068
 MonoBehaviour:
@@ -9536,10 +9556,12 @@ Transform:
   m_Children:
   - {fileID: 1745526764}
   - {fileID: 55591798}
+  - {fileID: 2062525730}
+  - {fileID: 2099299067}
   - {fileID: 375674503}
   - {fileID: 1087191488}
   - {fileID: 436573414}
   - {fileID: 1969980553}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -18,7 +18,7 @@ public class VerticalArray : MonoBehaviour
     private TextMeshPro[] top_clones;
     private TextMeshPro[] bottom_clones;
 
-    void Start()
+    void Awake()
         {
         top_clones = new TextMeshPro[single_side_clones];
         bottom_clones = new TextMeshPro[single_side_clones];

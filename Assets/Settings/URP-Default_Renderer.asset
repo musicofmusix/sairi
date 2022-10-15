@@ -135,7 +135,7 @@ MonoBehaviour:
     cameraSettings:
       overrideCamera: 1
       restoreCamera: 1
-      offset: {x: 0.04, y: -0.005, z: 0, w: 1}
+      offset: {x: 0.03, y: -0.005, z: 0, w: 1}
       cameraFieldOfView: 20
 --- !u!114 &8643357749498255739
 MonoBehaviour:
