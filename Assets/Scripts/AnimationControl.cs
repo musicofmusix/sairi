@@ -17,7 +17,7 @@ public class AnimationControl : MonoBehaviour
     private float seconds = 0f;
     void Update()
         {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
             if (seconds <= 0f)
                 {
