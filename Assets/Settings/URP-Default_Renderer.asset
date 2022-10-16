@@ -1,5 +1,44 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4717917121111657721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: Curtain Active
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: Curtain Active
+    Event: 300
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 64
+      PassNames: []
+    overrideMaterial: {fileID: 2100000, guid: b24084bed53f447b3b1351039524953a, type: 2}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 1
+    depthCompareFunction: 5
+    enableWrite: 0
+    stencilSettings:
+      overrideStencilState: 1
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 1}
+      cameraFieldOfView: 20
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,7 +56,9 @@ MonoBehaviour:
       type: 3}
   m_RendererFeatures:
   - {fileID: 4755652704028663246}
-  m_RendererFeatureMap: ce1dc112f078ff41
+  - {fileID: -4717917121111657721}
+  - {fileID: 8643357749498255739}
+  m_RendererFeatureMap: ce1dc112f078ff4107f367fc5f9786be7b9976251460f377
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -39,7 +80,7 @@ MonoBehaviour:
   m_AssetVersion: 1
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1975
   m_TransparentLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -85,6 +126,45 @@ MonoBehaviour:
     depthCompareFunction: 2
     enableWrite: 0
     stencilSettings:
+      overrideStencilState: 1
+      stencilReference: 4
+      stencilCompareFunction: 6
+      passOperation: 2
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 1
+      restoreCamera: 1
+      offset: {x: 0.03, y: -0.005, z: 0, w: 1}
+      cameraFieldOfView: 20
+--- !u!114 &8643357749498255739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: Curtain Inactive
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: Curtain Inactive
+    Event: 300
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 64
+      PassNames: []
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
       overrideStencilState: 0
       stencilReference: 0
       stencilCompareFunction: 8
@@ -92,7 +172,7 @@ MonoBehaviour:
       failOperation: 0
       zFailOperation: 0
     cameraSettings:
-      overrideCamera: 1
+      overrideCamera: 0
       restoreCamera: 1
-      offset: {x: 0.04, y: -0.005, z: 0, w: 1}
-      cameraFieldOfView: 20
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
