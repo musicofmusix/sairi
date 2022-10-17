@@ -10,6 +10,8 @@
 	<img width=80% src="ReadmeImages/screen2_1080p.png">
 </p>
 
+**A WebGL 2 build can be played [here](https://musicofmusix.github.io/sairi/). A modern desktop or mobile browser is recommended.**
+
 This project was born as an attempt to blur the lines between *visually sophisticated but static* graphic posters and *interactive but relatively simpler* game UI. It aims to demonstrate an interface with a high focus on stylised visual aesthetics, specifically anime. Common design practices involving decorating the canvas with various shapes, typography, and visual effects were combined with user interactivity in Unity.
 
 <p align="center">
