@@ -15,7 +15,7 @@
 This project was born as an attempt to blur the lines between *visually sophisticated but static* graphic posters and *interactive but relatively simpler* game UI. It aims to demonstrate an interface with a high focus on stylised visual aesthetics, specifically anime. Common design practices involving decorating the canvas with various shapes, typography, and visual effects were combined with user interactivity in Unity.
 
 <p align="center">
-	<img width=60% src="ReadmeImages/main_demo.gif">
+	<img width=80% src="ReadmeImages/main_demo.gif">
 </p>
 
 ## Features
