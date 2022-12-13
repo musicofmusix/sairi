@@ -2,8 +2,8 @@
 *Anime style interactive graphic poster/game UI demo*
 
 [![GitHub](https://img.shields.io/github/license/musicofmusix/sairi)](./LICENSE)
-[![Unity](https://img.shields.io/badge/Unity-2021.3.9f1-%23000000)](https://unity3d.com/unity/whats-new/2021.3.9)
-[![URP-UniVrm](https://img.shields.io/badge/URP--UniVrm-1.0.4-brightgreen)](https://github.com/EvelynGameDev/URP-UniVrm/releases/tag/ver-1.0.4)
+[![Unity](https://img.shields.io/badge/Unity-2021.3.15f1-lightgrey)](https://unity.com/releases/editor/whats-new/2021.3.15)
+[![URP-UniVrm](https://img.shields.io/badge/URP--UniVrm-1.0.4%20[DEPRECATED]-critical)](https://github.com/EvelynGameDev/URP-UniVrm/releases/tag/ver-1.0.4)
 
 <p align="center">
 	<img width=80% src="ReadmeImages/screen1_1080p.png">
@@ -45,9 +45,11 @@ This project was born as an attempt to blur the lines between *visually sophisti
 - Character eye-tracking and natural blinking
 
 ## Installation
-The project was developed and tested on Unity version 2021.3.9f1 LTS. Simply clone this repository and open it in the editor. Newer versions of the Unity editor were not tested, but will likely work.
+The project was developed and tested on Unity version 2021.3.15f1 LTS. Simply clone this repository and open it in the editor. Newer versions of the Unity editor were not tested, but will likely work.
 
-After opening the project, the [URP-UniVrm](https://github.com/EvelynGameDev/URP-UniVrm) [.unitypackage](https://github.com/EvelynGameDev/URP-UniVrm/releases) must be imported into the project for proper character rendering. The version used during development was 1.0.4.
+~~After opening the project, the [URP-UniVrm](https://github.com/EvelynGameDev/URP-UniVrm) [.unitypackage](https://github.com/EvelynGameDev/URP-UniVrm/releases) must be imported into the project for proper character rendering. The version used during development was 1.0.4.~~
+
+**As of December 2022, URP-UniVrm is no longer available due to the official [UniVRM](https://github.com/vrm-c/UniVRM) release now supporting URP. However, this project is not yet updated to use this new release. Most materials will not work out of the box.**
 
 Builds have been tested on macOS, Windows 11, iOS, and WebGL 2.
 
